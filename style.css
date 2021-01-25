@@ -1,0 +1,386 @@
+/*
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ The above is a way to reset the margin and padding of the entire document*/
+body{
+    background-color: #f4f4f4;
+    color: #555555;
+    font-family: Arial, helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    /*same as above. a shorter method
+    font: normal 16px Arial, Helvetica, sans-serif; */
+    
+    /*line height is used to create space between lines in a browser*/
+    line-height: 1.6em;
+    margin: 0;
+/*margin helps us get rid of the spaces around our design*/
+    
+}
+
+/*dealing with links, should come after the general body CSS*/
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: red;
+}
+
+a:active{
+    color: green;
+}
+
+a:visited{
+    /*color: black;*/
+}
+
+/*To target a class, we start with a dot (.)*/
+/*To make the site responsive, we set to % rather than px. below, use 500px compared to 80%*/
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+.button{
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    
+    
+}
+
+.button:hover{
+    background: red;
+    color: white;
+}
+
+.clr{
+    clear: both;
+}
+
+#header{
+    background-color: red;
+    height: 100px;
+    text-align:  center;
+}
+
+#my-link{
+    position: absolute;
+    top: 120px;
+    left: 0px;
+    background-color: green;
+    width: 100px;
+}
+
+.box-1{
+   background-color: #333;
+    color: #fff;
+    position: absolute;
+    top: 120px;
+    right: 0px;
+    width: 300px;
+/*
+    border-right: 5px red solid;
+    border-left: 5px red solid;
+    border-top: 5px red solid;
+    border-bottom: 5px red solid;
+this is a long process. the short process is, "border: 5px red solid;"
+*/
+    
+    border-width: 3px;
+    border-bottom-width: 10px;
+    border-top-style: dotted;
+    
+ border: 5px red solid; /*This overrides the previous 3 lines of code before it */
+    
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    
+   /*same as above*/ 
+    
+    padding: 20px;
+    
+    margin-top: 20px;
+    margin: 20px 0;
+}
+
+.box-1{
+    margin-left: 310px; /*this is when putting your page into columns*/
+}
+
+/*
+{
+margin-top:5px;
+margin-bottom: 5px;
+margin-right: 10px;
+margin-left: 10px;
+}
+the above can be reduced to;
+
+p{
+    margin: 5px (top) 10px (right) 5px (bottom) 10px (left) ;
+}
+ 
+and;
+
+p
+{
+margin: 5px (top and bottom if the same) 10px (left and right if the same); 
+}
+
+These same can be done for padding*/
+
+.box-1 h1{
+    font-family: cursive;
+    font-weight: 800;
+    font-style: italic;
+    text-decoration: underline;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    word-spacing: 1em;
+}
+
+
+.box-2{
+    border: 3px dotted #ccc;
+    padding: 20px;
+    margin: 20px 0;
+    
+}
+
+.box-3 h1,h2{
+    font-family: cursive;
+    font-weight: 200;
+    font-style: italic;
+    text-decoration: underline;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    word-spacing: 1em;
+}
+
+#holla{
+    position: absolute;
+    top:150px; /*used to push it down from the red-colored H1                       element*/
+    left:5px;
+    background-color: yellow;
+    width: 300px;
+
+}
+
+.categories{
+    border: 1px #ccc solid;
+    padding: 10px;
+    border-radius:15px; 
+    
+}
+
+.categories h2{
+    text-align: center;
+}
+
+.categories ul{
+    padding: 0;
+    padding-left: 20px;
+    list-style: square;
+    list-style: none;
+}
+
+.categories li{
+    padding-bottom: 6px;
+    border-bottom: dotted 1px #333;
+    list-style-image: url('../images/')
+}
+
+.my-form{
+    padding: 20px; /*this is used to separate the form from the last div*/
+}
+
+.my-form .form-group{
+        padding-bottom: 15px; /*this is to separate each line of form*/
+    }
+.my-form label{
+    display: block; /*this is to make the name and the form appear on two separate lines. This is what the block element does.*/
+}
+
+.my-form input[type="text"], .my-form textarea {       /*this is to target a type of input and in this case, text.*/ 
+    padding: 8px;
+    width:100%; /*this is to help the box fill the browser space*/
+}
+
+/*.block{
+    float: left;
+    width: 33.3%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box; /*box sizing helps to set the properties given above to fit in
+}*/
+
+.block{
+    float: left;
+    width: 20%;
+    
+}
+#main-block{
+    float: left;
+    width: 40%;
+    margin: 5px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#sidebar{
+    float: left;
+    width: 70%;
+    
+    
+}
+
+.p-box{
+    width: 800px;
+    height: 500px;
+    border: 1px solid #000;
+    margin-top: 30px;
+    position: relative;
+    background-image: url(imagien/Lighthouse.jpg);
+    background-position: 100px 200px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-position: center top;
+}
+
+.p-box h1{
+    position: absolute;
+    top:100px;
+    left: 200px;
+}
+
+.p-box h2{
+    position: absolute;
+    bottom:40px;
+    right: 100px;
+}
+
+.fix-me{
+    position: fixed;
+    top: 400px
+}
+
+.my-list li:first-child{
+    background: red;
+}
+
+
+.my-list li:last-child{
+    background: blue;
+}
+
+.my-list li:nth-child(5){
+    background: yellow;
+}
+
+.my-list li:nth-child(even){
+    background: grey;
+}
+
+.my-list li{
+    list-style-type: none;
+}
+
+/*.about-us li:nth-child(2) {
+    display: none;
+}*/
+
+/*.about-us li:nth-child(2) {
+    visibility: hidden;
+}*/
+
+/*.about-us {
+    display: inline;
+    width: 180px;
+    margin: 5px;
+    padding: 3px 0 0 10px;
+    text-align: center;
+    border-bottom: 3px solid #000000;
+    border-left: 10px solid #cccccc;
+    background-color: #cccc99;
+}*/
+
+.about-us li {
+    display:inline-block;
+    width: 180px;
+    margin: 5px;
+    padding: 3px 0 0 10px;
+    text-align: center;
+    border-bottom: 3px solid #000000;
+    border-left: 10px solid #cccccc;
+    background-color: #cccc99;
+    text-transform: uppercase;
+    
+}
+
+.about-us li{
+    text-decoration: none;
+    color: blue;
+}
+
+.about-us li:hover{
+    background-color: brown;
+}
+
+.about-us li:nth-child(4) {
+    position: relative;
+   top: 20px;
+    left: 20px;
+}
+
+.about-us li:last-child {
+    position: absolute; /*it went to the upper part of the browser*/
+   top: 20px;
+    left: 20px;
+
+}
+
+.about-us li:nth-child(3) {
+    position: fixed;/*it is fixed in the browser irrespective of how you scroll*/
+   top: 20px;
+    left: 20px;
+
+}
+
+
+
+/*descendant selector...> This has to do with paragragraph elements that are anywhere inside a div element. the style will only apply to the p inside a div
+div p {
+    background-color: blue;
+}
+*/
+
+
+/*child selector...> This has to do with p directly beneath the div, it is the > sign makes it a child selector
+div > p {
+    background-colour: green;
+}
+
+*/
+
+/*attribute selector....> the example below says it should pick all images with the attribute of alt-spacer and set it to a padding of 0px
+img[alt-spacer] {
+padding:0px;
+}*/
+
+/*pseudo class. they are inherent based on other characteristics. for example,we could set a color to deal with href sites visited, so that they stay in the background
+
+a: visited {color:#dddddd}
+
+*/
+
